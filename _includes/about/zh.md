@@ -1,7 +1,7 @@
 > 吃喝玩乐
 > 样样都行
 
-除了睡觉，没什么擅长的事情
+除了睡觉，没什么擅长的事情。
 前19年人生平平无奇，未来待续...
 👉 戳 [Portfolio](/portfolio)、[Github](http://github.com/huxpro)、[演说.io](http://https://zhuanlan.zhihu.com/p/21280918)。 
 
