@@ -8,7 +8,7 @@ header-img: "img/post-bg-ios9-web.jpg"
 catalog:    true
 tags:
     - 前端开发
-    - JavaScript
+    - infovis
     - iOS
     - 译文
 ---
