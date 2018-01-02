@@ -1,82 +1,60 @@
 ---
-layout:     post
-title:      "Hello 2015"
-subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-01-29 12:00:00
-author:     "Hux"
-header-img: "img/post-bg-2015.jpg"
-catalog: true
-categories： R
-
----
-
-> “Yeah It's on. ”
+layout: 如何设置R中的TimeZone
+title: 一打开R就自动默认加载
+subtitle: 
+categories: R
+tags: 
+date: 
+author: 
+header-img: 
+description: 
+post: 
 
 
-## 前言
-
-Hux 的 Blog 就这么开通了。
-
-[跳过废话，直接看技术实现 ](#build) 
-
-
-
-2015 年，Hux 总算有个地方可以好好写点东西了。
-
-
-作为一个程序员， Blog 这种轮子要是挂在大众博客程序上就太没意思了。一是觉得大部分 Blog 服务都太丑，二是觉得不能随便定制不好玩。之前因为太懒没有折腾，结果就一直连个写 Blog 的地儿都没有。
-
-在玩了一段时间知乎之后，答题的快感又激起了我开博客的冲动。之前的[个人网站](http://huangxuan.me/portfolio)是作品集形式的（现在集成进来了），并不适合用来写博文，一不做二不休，花一天搞一个吧！
-
-
-<p id = "build"></p>
----
-
-## 正文
-
-接下来说说搭建这个博客的技术细节。  
-
-正好之前就有关注过 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
-
-其优点非常明显：
-
-* **Markdown** 带来的优雅写作体验
-* 非常熟悉的 Git workflow ，**Git Commit 即 Blog Post**
-* 利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机
-	* 如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了 
-* Jekyll 的自定制非常容易，基本就是个模版引擎
-
-
-本来觉得最大的缺点可能是 GitHub 在国内访问起来太慢，所以第二天一起床就到 GitCafe(Chinese GitHub Copy，现在被 Coding 收购了) 迁移了一个[镜像](http://huxpro.coding.me)出来，结果还是巨慢。
-
-哥哥可是个前端好嘛！ 果断开 Chrome DevTool 查了下网络请求，原来是 **pending 在了 Google Fonts** 上，页面渲染一直被阻塞到请求超时为止，难怪这么慢。  
-忍痛割爱，只好把 Web Fonts 去了（反正超时看到的也只能是 fallback ），果然一下就正常了，而且 GitHub 和 GitCafe 对比并没有感受到明显的速度差异，虽然 github 的 ping 值明显要高一些，达到了 300ms，于是用 DNSPOD 优化了一下速度。
-
-
-
----
-
-配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手
-
-大的 Jekyll 主题上直接 fork 了 Clean Blog（这个主题也相当有名，就不多赘述了。唯一的缺点大概就是没有标签支持，于是我给它补上了。）
-
-本地调试环境需要 `gem install jekyll`，结果 rubygem 的源居然被墙了……后来手动改成了我大淘宝的镜像源才成功
-
-Theme 的 CSS 是基于 Bootstrap 定制的，看得不爽的地方直接在 Less 里改就好了（平时更习惯 SCSS 些），**不过其实我一直觉得 Bootstrap 在移动端的体验做得相当一般，比我在淘宝参与的团队 CSS 框架差多了……**所以为了体验，也补了不少 CSS 进去
-
-最后就进入了耗时反而最长的**做图、写字**阶段，也算是进入了**写博客**的正轨，因为是类似 Hack Day 的方式去搭这个站的，所以折腾折腾着大半夜就过去了。
-
-第二天考虑中文字体的渲染，fork 了 [Type is Beautiful](http://www.typeisbeautiful.com/) 的 `font` CSS，调整了字号，适配了 Win 的渣渲染，中英文混排效果好多了。
-
-
-## 后记
-
-回顾这个博客的诞生，纯粹是出于个人兴趣。在知乎相关问题上回答并获得一定的 star 后，我决定把这个博客主题当作一个小小的开源项目来维护。
-
-在经历 v1.0 - v1.5 的蜕变后，这个博客主题愈发完整，不但增加了诸多 UI 层的优化（opinionated）；在代码层面，更加丰富的配置项也使得这个主题拥有了更好的灵活性与可拓展性。而作为一个开源项目，我也积极的为其完善文档与解决 issue。
-
-如果你恰好逛到了这里，希望你也能喜欢这个博客主题。
-
-—— Hux 后记于 2015.10
-
-
+Misc
+2015-12-02
+Bruce
+/img/post/firstblog-bg.jpg
+第一篇blog，关于配置R中的启动变量。
+写在前面的话
+欢迎大家来到小赵的blog，这是我的第一篇文章。
+这篇文章将简单记录如何配置R中默认启动项。前一阵子使用了devtools包里面的一个session_info()函数，发现自己的tz设置成为了Asia/Taipei，用sessionInfo()也是可以看到的。在强迫症的作用下，我就要去把tz设置成Asia/Shanghai.
+代码为： {% highlight r %}
+Sys.timezone() [1] "Asia/Taipei" devtools::session_info() Session info -------------------------------------------------- setting value
+version R version 3.2.2 (2015-08-14)
+system x86_64, mingw32
+ui RStudio (0.99.484)
+language (EN)
+collate Chinese (Simplified)_China.936 tz Asia/Taipei
+date 2015-12-02
+Packages ------------------------------------------------------ package * version date source
+devtools 1.9.1 2015-09-11 CRAN (R 3.2.2) digest 0.6.8 2014-12-31 CRAN (R 3.1.2) memoise 0.2.1 2014-04-22 CRAN (R 3.1.2) {% endhighlight %}
+设置R环境
+现在开始进入正题，如何设置R中的时区，以及让R每次打开都自动配置好工作环境？
+{% highlight r %} Sys.setenv(TZ="Asia/Shanghai") {% endhighlight %}
+一行命名搞定。（看着简单，我看了好几篇Google的文章）
+startup with custom R environment
+上面的命名只是一次性的，当你关掉R再打开，输入Sys.timezone()又是Asia/Taipei，非常讨厌 ~~所以我的一劳永逸的方法是：
+在R.home里面找到Rprofile文件，在里面加入命名就行了，以后每一次打开首先运行里面的代码，所以就ok了~
+R.3.2.2\etc\Rprofile.site 加入 Sys.setenv(TZ="Asia/Shanghai")
+这个也给我一个启示，比如你经常要加载Hadley的包，你可以直接写在里面，下次一打开R就自动加载好了。
+编码环境问题
+输入： {% highlight r %}
+sessionInfo() R version 3.2.2 (2015-08-14) Platform: x86_64-w64-mingw32/x64 (64-bit) Running under: Windows 8 x64 (build 9200)
+locale: [1] LC_COLLATE=Chinese (Simplified)_China.936 [2] LC_CTYPE=Chinese (Simplified)_China.936
+[3] LC_MONETARY=Chinese (Simplified)_China.936 [4] LC_NUMERIC=C
+[5] LC_TIME=Chinese (Simplified)_China.936
+attached base packages: [1] stats graphics grDevices utils datasets methods base
+loaded via a namespace (and not attached): [1] tools_3.2.2 {% endhighlight %}
+你会看到.936...这个是GBK编码的环境。想必很多人都碰到中文乱码的问题，小赵也是深受其害啊。下一期找一个时间写一写解决中文乱码问题的总结，把我之前探索的经验跟大家交流一下。另外 还有黑魔法用R生成中文PDF以及中文beamer教程。
+写在后面的话
+这篇非常短的文章希望能给需要的人一点小帮助，同时也作为我的备忘。另外这一版的blog界面布局在手机端上面显示不是很好，这个周末我将会改一改。 下一篇将给大家带来 用R连接数据库教程，轻轻松松处理几十万条数据。接下要写的文章包括的内容有：
+用SQLite搭建本地轻型数据库
+R连接数据库 RSQLite
+dplyr 调用数据库
+readr 方便快捷读入写出数据
+jekeyll 如何搭建像小赵这样的blog（这个主题没有选好，建议大家去这里 https://github.com/jekyll/jekyll/wiki/Themes 挑）
+用R生成中文PDF
+用R生成中文beamer
+可视化专场
+干货多多，欢迎大家RSS我的blog。需要拍砖的请在下面多说区域评论,可以采用访客模式，但是还是建议去注册一个账号再来评论，支持主流社交账号。
