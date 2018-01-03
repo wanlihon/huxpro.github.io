@@ -1,3 +1,3 @@
 
 
-> ENGLISH is poor
+> Englisho is poor
