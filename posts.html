@@ -102,7 +102,8 @@ header-img: "img/post-bg.jpg"
 
             {% if group == null or group == node.group %}
 
-             <li><a href="/infovis/web笔记">web笔记</a> <span class="text-muted"> »  2018-01-03</span></li>
+              <li><a href="{{ site.BASE_PATH }}{{node.url}}">{{node.title}}</a> <span class="text-muted"> &raquo;  {{ node.date | date: "%F" }}</span></li>
+
             {% endif %}
 
           {% endif %}
