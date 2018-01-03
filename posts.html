@@ -4,18 +4,30 @@ layout: default
 description: knowledge is power
 header-img: "img/post-bg.jpg"
 ---
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<header class="intro-header" style="background-image: url('{{ site.BASE_PATH }}{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+
     <div class="container">
+
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading" id="tag-heading">
+
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+
+                <div class="site-heading">
+
                     <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+
+                    <!--<hr class="small">-->
+
                     <span class="subheading">{{ page.description }}</span>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </header>
 
 
@@ -32,7 +44,7 @@ header-img: "img/post-bg.jpg"
 
             <li>
 
-                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}-ref" data-toggle="tab">
+                <a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}-ref" data-toggle="tab">
 
                   {{ category | capitalize }} <span class="badge pull-right">{{ site.categories[category].size }}</span>
 
@@ -48,7 +60,7 @@ header-img: "img/post-bg.jpg"
 
             <li>
 
-                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}-ref" data-toggle="tab">
+                <a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}-ref" data-toggle="tab">
 
                     {{ category[0] | capitalize }} <span class="badge pull-right">{{ category[1].size }}</span>
 
@@ -90,7 +102,7 @@ header-img: "img/post-bg.jpg"
 
             {% if group == null or group == node.group %}
 
-              <li><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a> <span class="text-muted"> &raquo;  {{ node.date | date: "%F" }}</span></li>
+              <li><a href="{{ site.BASE_PATH }}{{node.url}}">{{node.title}}</a> <span class="text-muted"> &raquo;  {{ node.date | date: "%F" }}</span></li>
 
             {% endif %}
 
