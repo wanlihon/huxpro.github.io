@@ -32,7 +32,36 @@ layout: default
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
-              
+                <!-- Featured Tags -->
+                {% if site.featured-tags %}
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				{% for tag in site.tags %}
+                            {% if tag[1].size > {{site.featured-condition-size}} %}
+                				<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                                    {{ tag[0] }}
+                                </a>
+                            {% endif %}
+        				{% endfor %}
+        			</div>
+                </section>
+                {% endif %}
+
+                <!-- Friends Blog -->
+                {% if site.friends %}
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    {% for friend in site.friends %}
+                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        {% else %}
+
 <!-- USE SIDEBAR -->
     <!-- PostList Container -->
     		<div class="
@@ -52,7 +81,22 @@ layout: default
                 col-xs-12
                 sidebar-container
             ">
-               
+                <!-- Featured Tags -->
+                {% if site.featured-tags %}
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        {% for tag in site.tags %}
+                            {% if tag[1].size > {{site.featured-condition-size}} %}
+                                <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                                    {{ tag[0] }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
 
                 <!-- Short About -->
                 <section class="visible-md visible-lg">
@@ -71,8 +115,8 @@ layout: default
                                 <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
-                     
-					 </span>
+                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                                    </span>
                                 </a>
                             </li>
                             {% endif %}
@@ -139,6 +183,18 @@ layout: default
                         </ul>
                     </div>
                 </section>
-               
+                <!-- Friends Blog -->
+                {% if site.friends %}
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    {% for friend in site.friends %}
+                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+    		</div>
+        {% endif %}
 	</div>
 </div>
+
