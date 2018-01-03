@@ -3,13 +3,45 @@ layout: page
 description: "相信未来 热爱生命"
 ---
 
+{% for post in paginator.posts %}
 
+<div class="post-preview">
 
-    <p class="post-meta">
+    <a href="{{ post.url | prepend: site.baseurl }}">
 
-        Posted on {{ post.date | date: "%B %-d, %Y" }};&nbsp;浏览量:&nbsp;<span data-hk-page="{{ post.url | prepend: site.url }}"> - </span>次.
+        <h2 class="post-title">
 
-    </p>
+            {{ post.title }}
+
+        </h2>
+
+        {% if post.subtitle %}
+
+        <h3 class="post-subtitle">
+
+            {{ post.subtitle }}
+
+        </h3>
+
+        {% endif %}
+
+		{% if post.description %}
+
+        <div class="post-content-preview">
+
+            {% if post.description %}
+
+			{{ post.description }}
+
+			{% endif %}
+
+        </div>
+
+		{% endif %}
+
+    </a>
+
+   
 
 </div>
 
