@@ -24,6 +24,10 @@
 .sidebar-container a {
   color: #bfbfbf !important;
 }
+.sidebar-container {
+	transform：scale（0.5px）
+}
+
 .sidebar-container a:hover,
 .sidebar-container a:active {
   color: #aab7b8  !important;
