@@ -7,3 +7,8 @@
     text-decoration: none;
     background-color: #78909c ;
 }
+ .nav-tabs-vertical{
+    position: relative;
+    display: block;
+    padding: 10px 50px;
+}
