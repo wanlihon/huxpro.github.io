@@ -15,31 +15,13 @@ legend {
 legend {
     display: block;
     width: 100%;
-    padding: 0;
+    padding: 0 120px;
     margin-bottom: 20px;
     font-size: 21px;
     line-height: inherit;
     color: #333;
     border: 0;
     border-bottom: 1px solid #e5e5e5;
-}
-legend {
-    padding: 0;
-    border: 0;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-legend {
-    display: block;
-    -webkit-padding-start: 2px;
-    -webkit-padding-end: 2px;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
 }
 
 
