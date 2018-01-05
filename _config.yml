@@ -4,7 +4,7 @@ SEOTitle: wanlihon Blog
 header-img: img/home-bg.jpg
 email: 1535618354@qq.com
 description: 网络与新媒体学生
-affiliation："中山大学南方学院 <a href = 'http://wcy.nfu.edu.cn/zh/教学教务/培养方案/网络与新媒体/'>网络与新媒体</a> 培养方案核心课程学期作品，由 <a href='http://wcy.nfu.edu.cn/zh/学院概况/师资队伍/廖汉腾/'>廖汉腾副教授</a> 指导" 
+affiliation: "中山大学南方学院 <a href = 'http://wcy.nfu.edu.cn/zh/教学教务/培养方案/网络与新媒体/'>网络与新媒体</a> 培养方案核心课程学期作品，由 <a href='http://wcy.nfu.edu.cn/zh/学院概况/师资队伍/廖汉腾/'>廖汉腾副教授</a> 指导" 
 keyword: nothing
 url: "https://wanlihon.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
