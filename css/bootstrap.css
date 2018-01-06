@@ -6528,7 +6528,7 @@ button.close {
 }
 
 @media print {
-    #masthead, nav, button, html [type=button], .menu-screen {
+    #masthead, nav,site-heading,tag-heading, button, html [type=button], .menu-screen {
         display: none;
     }
     html, body {
