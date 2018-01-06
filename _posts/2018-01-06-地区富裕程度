@@ -2,9 +2,11 @@
 layout: post
 title: "地区富裕程度"
 author: "wanlihon"
-header-img: "img/diqufuyuchengdu.jpg"
+header-img: "img/地区富裕程度有.jpg"
 categories: infovis
 permalink: /:categories/:title.html
+tags:
+    - 课程笔记
 ---
 
            <p><strong><br>选用了画廊、心理、牙科、健身房、养老院5个数据来体现中国的地区富裕程度，越富裕的地区，以上5个指标表现在地图图表上越密集。可见东部沿海地区的密集程度远远大于西部地区，说明中国的经济发展不平衡。另用居民可支配收入和居民人均消费支出制作条形图，由此可以对比出广东上海两省富裕程度是远大于其他省市的。中国的经济发展应当做到部分带动部分，最终实现部分带动整体。
