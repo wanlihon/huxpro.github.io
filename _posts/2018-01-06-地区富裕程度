@@ -1,0 +1,11 @@
+---
+layout: post
+title: "地区富裕程度"
+author: "wanlihon"
+header-img: "img/diqufuyuchengdu.jpg"
+categories: infovis
+permalink: /:categories/:title.html
+---
+           <p><strong><br>选用了画廊、心理、牙科、健身房、养老院5个数据来体现中国的地区富裕程度，越富裕的地区，以上5个指标表现在地图图表上越密集。可见东部沿海地区的密集程度远远大于西部地区，说明中国的经济发展不平衡。另用居民可支配收入和居民人均消费支出制作条形图，由此可以对比出广东上海两省富裕程度是远大于其他省市的。中国的经济发展应当做到部分带动部分，最终实现部分带动整体。
+			</br></strong></p>
+           <div class='tableauPlaceholder' id='viz1515232092020' style='position: relative'><noscript><a href='#'><img alt='地区富裕程度 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_16530&#47;sheet3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='_16530&#47;sheet3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;_1&#47;_16530&#47;sheet3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1515232092020');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='900px';vizElement.style.height='900px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
