@@ -7,7 +7,7 @@ categories: posts rwd
 permalink: /:categories/:title.html
 tags:
     - GitHub
-	- Jekyll
+    - Jekyll
     - 网页设计与制作
 ---
 
